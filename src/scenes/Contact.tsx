@@ -31,6 +31,10 @@ const Contact = () => {
     if (!isValid) {
       e.preventDefault();
     }
+    setTimeout(
+      () => setValue({ name: '', email: '', message: '', company: '' }),
+      500
+    );
   };
 
   const handleChange = (
@@ -101,7 +105,9 @@ const Contact = () => {
             action="https://formspree.io/f/xnqknpnq"
             method="POST"
             className="py-20"
-            onSubmit={handleSubmit}
+            onSubmit={(e) => handleSubmit(e)}
+            target="_blank"
+            id="resetForm"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
