@@ -153,7 +153,9 @@ const About = () => {
                     <div className="w-1/2 bg-navy-blue h-10 flex justify-between text-center text-base widescreen:text-lg text-bright-orange items-center hover:opacity-90 duration-300">
                       <a
                         className="mx-auto font-aileron font-bold widescreen:w-full"
-                        href="https://github.com"
+                        href="https://github.com/japundzasergej/my-website"
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         {isLarge ? 'Source Code' : 'Code'}
                       </a>
@@ -336,7 +338,9 @@ const About = () => {
                   <div className="w-1/2 bg-navy-blue h-10 flex justify-between text-center text-base text-bright-orange items-center hover:opacity-90 duration-300">
                     <a
                       className="mx-auto font-aileron font-semibold w-full"
-                      href="https://github.com"
+                      href="https://github.com/japundzasergej/my-website"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       {isLarge ? 'Source Code' : 'Code'}
                     </a>
