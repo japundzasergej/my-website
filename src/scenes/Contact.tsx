@@ -98,7 +98,7 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
-            action="https://formsubmit.co/ce197cbcf0ae5ebdbc3bfb3f34c9beeb"
+            action="https://formspree.io/f/xnqknpnq"
             method="POST"
             className="py-20"
             onSubmit={handleSubmit}
