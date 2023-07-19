@@ -123,7 +123,7 @@ const Experience = () => {
                   className={`shadow-md ${style} md:p-10 p-6 hover:opacity-70 hover:scale-105 duration-500 `}
                 >
                   <img
-                    src={`/src/assets/${src}.png`}
+                    src={`/${src}.png`}
                     alt={src}
                     className="w-16 md:max-w-[38px] lg:max-w-[64px] "
                   />
