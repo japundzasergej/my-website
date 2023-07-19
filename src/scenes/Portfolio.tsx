@@ -47,7 +47,7 @@ const Project = ({ title }: ProjectType) => {
           </a>
         </div>
       </div>
-      <img src={`/src/assets/${projectTitle}.png`} alt={projectTitle} />
+      <img src={`/${projectTitle}.png`} alt={projectTitle} />
     </motion.div>
   );
 };
