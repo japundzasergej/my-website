@@ -41,7 +41,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className={`${isDesktop ? 'py-64' : 'py-48'} ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'}  `}
+      className={`${isDesktop ? 'py-64' : 'py-32'} ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'}  `}
     >
       <article className="flex flex-col justify-center items-center">
         <motion.div
@@ -67,9 +67,9 @@ const Experience = () => {
             } mx-auto mb-20`}
           />
         </motion.div>
-        <div className="md:p-20 p-14 z-30 bg-metallic widescreen:w-4/6 w-5/6 rounded-lg font-aileron font-bold text-navy-blue flex justify-center items-center">
+        <div className="lg:p-12 md:p-20 p-14 z-30 bg-metallic widescreen:w-4/6 w-5/6 rounded-lg font-aileron font-bold text-navy-blue flex justify-center items-center">
           <motion.div
-            className="grid newScreen:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-y-10 md:gap-x-36 gap-x-20 items-center"
+            className="grid newScreen:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-y-10 lg:gap-x-24 md:gap-x-36 gap-x-20 items-center"
             variants={container}
             initial="hidden"
             whileInView="visible"

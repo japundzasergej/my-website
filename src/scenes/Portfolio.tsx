@@ -123,7 +123,7 @@ const Portfolio = () => {
 
           <div
             className="flex justify-center text-center items-center p-10 bg-metallic
-              max-w-[600px] max-h-[600px] widescreen:text-4xl text-3xl font-playfair font-light text-navy-blue mx-auto  widescreen:mt-0 mt-10"
+              max-w-[600px] max-h-[600px] widescreen:text-2xl text-xl font-playfair font-light text-navy-blue mx-auto  widescreen:mt-0 mt-10"
           >
             <p>
               streamlined user{' '}
