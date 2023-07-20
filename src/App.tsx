@@ -31,10 +31,10 @@ const App = () => {
       if (window.scrollY >= 2000) {
         dispatch(setSelectedPage('portfolio'));
       }
-      if (window.scrollY >= 3000) {
+      if (window.scrollY >= 3400) {
         dispatch(setSelectedPage('experience'));
       }
-      if (window.scrollY >= 4500) {
+      if (window.scrollY >= 5000) {
         dispatch(setSelectedPage('contact'));
       }
     };
