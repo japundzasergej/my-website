@@ -195,7 +195,7 @@ const About = () => {
               viewport={{ once: true, amount: 0.5 }}
             >
               <motion.div
-                className={`flex flex-col justify-center text-center items-center p-4 font-playfair font-semibold ${
+                className={`flex flex-col justify-center text-center items-center p-6 font-playfair font-semibold ${
                   isDark ? 'text-light-beige' : 'text-navy-blue'
                 }`}
                 variants={{
@@ -207,7 +207,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 1.8 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="widescreen:text-4xl text-2xl mb-2">
+                <p className="lg:text-4xl text-2xl mb-2">
                   Check out my{' '}
                   <span
                     className={`${

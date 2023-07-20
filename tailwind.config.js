@@ -22,10 +22,8 @@ export default {
       },
       screens: {
         widescreen: '1340px',
-        tallscreen: '700px',
+        midscreen: '1200px',
         bigscreen: '1600px',
-        midscreen: '1650px',
-        hugescreen: '1700px',
         newScreen: '1024px'
       },
       fontFamily: {

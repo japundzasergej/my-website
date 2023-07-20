@@ -49,7 +49,7 @@ const Landing = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <p className="widescreen:text-6xl md:text-6xl sm:text-5xl text-4xl text-center lg:text-start font-semibold max-widescreen:xl">
+        <p className="widescreen:text-6xl midscreen:text-5xl lg:text-4xl md:text-6xl sm:text-5xl text-4xl text-center lg:text-start font-semibold max-widescreen:xl">
           Hi, my name is{' '}
           <span className={`${isDark ? 'text-dark-accent' : 'text-navy-blue'}`}>
             Sergej
