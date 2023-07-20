@@ -73,7 +73,7 @@ const Contact = () => {
         <div
           className={`flex ${
             isLarge ? '' : 'flex-col'
-          } justify-between items-center lg:gap-x-[200px]`}
+          } justify-between items-center bigscreen:gap-x-[25px] widescreen:gap-x-[50px] `}
         >
           <motion.div
             initial="hidden"
@@ -85,7 +85,7 @@ const Contact = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="widescreen:text-5xl text-4xl text-center lg:text-start font-semibold text-metallic ">
+            <p className="widescreen:text-5xl text-4xl text-center lg:text-start font-semibold text-metallic bigscreen:min-w-[900px] widescreen:min-w-[600px] newScreen:min-w-[375px]">
               Looking{' '}
               <span
                 className={`${isDark ? 'text-dark-accent' : 'text-navy-blue'}`}
