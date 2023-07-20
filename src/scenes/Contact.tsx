@@ -190,7 +190,7 @@ const Contact = () => {
                 <textarea
                   rows={5}
                   cols={isMedium ? 35 : 20}
-                  className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-3xl font-playfair font-semibold focus:outline-none md:placeholder:text-3xl placeholder:text-2xl"
+                  className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-3xl font-playfair font-semibold focus:outline-none md:placeholder:text-3xl newScreen:placeholder:text-2xl placeholder:text-xl"
                   placeholder="Your message here..."
                   {...register('message', {
                     required: true,
