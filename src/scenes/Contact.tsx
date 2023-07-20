@@ -120,7 +120,8 @@ const Contact = () => {
             <div className="flex flex-col justify-center items-center text-center">
               <input
                 type="text"
-                className="md:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none"
+                className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none newScreen:text-xl 
+                newScreen:placeholder:text-xl md:placeholder:text-2xl"
                 placeholder="Enter your name..."
                 {...register('name', {
                   required: true,
@@ -145,7 +146,8 @@ const Contact = () => {
               )}
               <input
                 type="email"
-                className="md:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none mt-10"
+                className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none mt-10 newScreen:text-xl
+                newScreen:placeholder:text-xl md:placeholder:text-2xl"
                 placeholder="Enter your email..."
                 {...register('email', {
                   required: true,
@@ -165,7 +167,7 @@ const Contact = () => {
               )}
               <input
                 type="text"
-                className="md:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none my-10"
+                className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold newScreen:text-xl text-2xl focus:outline-none my-10 newScreen:placeholder:text-xl md:placeholder:text-2xl placeholder:text-xl "
                 placeholder="Enter your company name... (optional)"
                 {...register('company', {
                   required: false,
@@ -189,7 +191,7 @@ const Contact = () => {
               <textarea
                 rows={5}
                 cols={isMedium ? 35 : 20}
-                className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-2xl font-playfair font-semibold focus:outline-none"
+                className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-2xl font-playfair font-semibold focus:outline-none placeholder:text-2xl"
                 placeholder="Your message here..."
                 {...register('message', {
                   required: true,
@@ -214,7 +216,7 @@ const Contact = () => {
               )}
 
               <button
-                className="bg-gradient-mirage text-[#FFFFF0] rounded-md newScreen:py-4 px-14 py-6 px-16 font-extrabold
+                className="bg-gradient-mirage text-[#FFFFF0] rounded-md newScreen:py-4 md:px-14 py-6 px-16 font-extrabold
                hover:text-navy-blue transition duration-500 flex group md:text-2xl text-xl mt-10"
                 type="submit"
               >
