@@ -55,7 +55,7 @@ const Experience = () => {
           }}
         >
           <h1 className="italic">Experience</h1>
-          <p className="newScreen:text-4xl text-2xl pt-20 pb-10">
+          <p className="newScreen:text-4xl text-3xl pt-20 pb-10 px-10">
             These are the technologies I'm comfortable working with:{' '}
           </p>
           <Line
@@ -64,9 +64,9 @@ const Experience = () => {
             } mx-auto mb-20`}
           />
         </motion.div>
-        <div className="md:p-20 p-14 z-30 bg-metallic md:w-4/6 w-5/6 rounded-lg font-aileron font-bold text-navy-blue flex justify-center items-center">
+        <div className="md:p-20 p-14 z-30 bg-metallic w-5/6 rounded-lg font-aileron font-bold text-navy-blue flex justify-center items-center">
           <motion.div
-            className="grid newScreen:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-20 items-center"
+            className="grid newScreen:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-y-10 md:gap-x-40 gap-x-20 items-center"
             variants={container}
             initial="hidden"
             whileInView="visible"

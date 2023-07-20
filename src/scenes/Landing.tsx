@@ -17,7 +17,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className={`lg:flex lg:justify-start justify-center items-center py-52 ${
+      className={`lg:flex lg:justify-start justify-center items-center ${isDesktop ? 'py-52' : 'py-24'} ${
         isDark ? 'bg-dark-bg' : 'bg-bright-orange'
       } bg-cover bg-no-repeat`}
     >
@@ -36,7 +36,7 @@ const Landing = () => {
           <img src={newHero} alt="hero" />
         </motion.div>
       ) : (
-        <img src={newHero} alt="hero" className="w-screen max-h-[440px] sm:max-h-[540px] md:max-h-[610px]" />
+        <img src={newHero} alt="hero" className="w-screen max-h-[440px] sm:max-h-[540px] md:max-h-[800px]" />
       )}
       <motion.div
         className="z-30 mt-40 ml-4 widescreen:mt-32 widescreen:ml-12 text-metallic"

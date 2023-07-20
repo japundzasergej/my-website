@@ -20,7 +20,7 @@ const About = () => {
       id="about"
       className={`min-h-screen ${
         isDark ? 'bg-dark-about' : 'bg-about'
-      } bg-no-repeat bg-cover flex items-center justify-center py-48`}
+      } bg-no-repeat bg-cover flex items-center justify-center ${isDesktop ? 'py-48' : 'py-24'}`}
     >
       <article className="flex flex-col justify-center items-center w-full h-full">
         {isMobileModal ? (
@@ -59,7 +59,7 @@ const About = () => {
             >
               {isModal ? (
                 <div className="flex flex-col ">
-                  <div className="widescreen:text-base lg:text-sm text-xs font-playfair font-bold">
+                  <div className="bigscreen:text-base lg:text-sm text-xs font-playfair font-bold widescreen:p-10 p-4">
                     <p>
                       Over the course of three months, I dedicated myself to
                       honing my skills and mastering the MERN (MongoDB, Express,
@@ -239,8 +239,8 @@ const About = () => {
         ) : (
           <article className="w-screen flex justify-center items-center mt-10 ">
             {isMobileModal ? (
-              <div className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center p-8 rounded-md shadow-md font-semibold text-navy-blue font-playfair">
-                <div className="text-xs sm:text-base text-center">
+              <div className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center rounded-md shadow-md font-semibold text-navy-blue font-playfair h-[800px] text-sm sm:text-lg md:text-xl p-10">
+                <div>
                   <p>
                     Over the course of three months, I dedicated myself to
                     honing my skills and mastering the MERN (MongoDB, Express,
@@ -248,7 +248,7 @@ const About = () => {
                     and hands-on projects, I have developed a strong foundation
                     in building robust and scalable web applications.
                   </p>
-                  <p className="py-4">
+                  <p>
                     When it comes to front-end development, I rely on TypeScript
                     and React as my go-to tools. The combination of these
                     technologies empowers me to create dynamic and interactive
@@ -256,14 +256,14 @@ const About = () => {
                     I leverage Vite.js as my build tool, allowing me to deliver
                     performant applications quickly and efficiently.
                   </p>
-                  <p className="mb-2">
+                  <p>
                     Furthermore, I have a deep understanding of the importance
                     of effective state management in complex applications.
                     That's why I embrace Redux Toolkit, a powerful library that
                     simplifies state management and helps me maintain a
                     well-structured codebase.
                   </p>
-                  <p className="mb-2">
+                  <p>
                     I take pride in my ability to tackle challenges head-on and
                     find innovative solutions. With every project, I strive to
                     push the boundaries of what's possible and deliver

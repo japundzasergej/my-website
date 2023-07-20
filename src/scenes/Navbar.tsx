@@ -149,7 +149,7 @@ const Navbar = () => {
               {links2.map(({ id, link, title }) => (
                 <motion.div
                   key={id}
-                  className={`text-left min-w-[200px] relative md:text-7xl sm:text-6xl text-5xl text-black py-5 font-extrabold ${link} before:absolute md:before:-left-28 before:-left-20 before:top-10 py-8 text-navy-blue border-b-2 flex justify-center border-sky-blue font-noto cursor-pointer`}
+                  className={`text-center relative md:text-7xl sm:text-6xl text-4xl text-black py-5 font-black ${link} before:absolute md:before:-left-28 before:-left-20 before:top-10 py-8 ${isDark ? 'text-white': 'text-navy-blue'} border-b-2 flex justify-center border-sky-blue font-noto cursor-pointer`}
                   variants={item}
                   whileHover={{ scale: 1.1 }}
                 >

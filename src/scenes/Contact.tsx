@@ -23,8 +23,8 @@ const Contact = () => {
   });
 
   const isDark = useAppSelector((state) => state.portfolio.isDark);
-  const isLarge = useMediaQuery('(min-width: 1060px)');
-  const isDesktop = useMediaQuery('(min-width: 768px)');
+  const isLarge = useMediaQuery('(min-width: 1040px)');
+  const isMedium = useMediaQuery('(min-width: 768px)');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     const isValid = await trigger();
@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className={`py-48 min-h-screen ${
+      className={`${isLarge ? 'py-48' : 'py-24'} min-h-screen ${
         isDark ? 'bg-dark-contact' : 'bg-light-contact'
       } bg-cover bg-no-repeat `}
     >
@@ -85,7 +85,7 @@ const Contact = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="widescreen:text-5xl lg:text-4xl text-3xl text-center lg:text-start font-semibold max-widescreen:xl text-metallic ">
+            <p className="widescreen:text-5xl text-4xl text-center lg:text-start font-semibold text-metallic ">
               Looking{' '}
               <span
                 className={`${isDark ? 'text-dark-accent' : 'text-navy-blue'}`}
@@ -120,7 +120,7 @@ const Contact = () => {
             <div className="flex flex-col justify-center items-center text-center">
               <input
                 type="text"
-                className="w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none"
+                className="md:w-[600px] w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none"
                 placeholder="Enter your name..."
                 {...register('name', {
                   required: true,
@@ -145,7 +145,7 @@ const Contact = () => {
               )}
               <input
                 type="email"
-                className="w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none mt-10"
+                className="md:w-[600px] w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none mt-10"
                 placeholder="Enter your email..."
                 {...register('email', {
                   required: true,
@@ -165,7 +165,7 @@ const Contact = () => {
               )}
               <input
                 type="text"
-                className="w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none my-10"
+                className="md:w-[600px] w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none my-10"
                 placeholder="Enter your company name... (optional)"
                 {...register('company', {
                   required: false,
@@ -188,7 +188,7 @@ const Contact = () => {
               )}
               <textarea
                 rows={5}
-                cols={isDesktop ? 40 : 28}
+                cols={isMedium ? 35 : 20}
                 className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-2xl font-playfair font-semibold focus:outline-none"
                 placeholder="Your message here..."
                 {...register('message', {
