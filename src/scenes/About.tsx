@@ -20,7 +20,7 @@ const About = () => {
       id="about"
       className={`${
         isDark ? 'bg-dark-about' : 'bg-about'
-      } bg-no-repeat bg-cover flex items-center justify-center ${isDesktop ? 'py-64' : 'py-80'}`}
+      } bg-no-repeat bg-cover flex items-center justify-center ${isDesktop ? 'py-64' : 'py-48'}`}
     >
       <article className="flex flex-col justify-center items-center w-full h-full">
         {isMobileModal ? (
@@ -285,7 +285,7 @@ const About = () => {
               </div>
             ) : (
               <motion.div
-                className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center md:p-36 sm:p-24  p-16 rounded-md shadow-md font-semibold text-navy-blue font-playfair"
+                className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center md:p-24 sm:p-14 p-10 rounded-md shadow-md font-semibold text-navy-blue font-playfair"
                 variants={{
                   hidden: { opacity: 0 },
                   show: { opacity: 1 },
@@ -308,13 +308,13 @@ const About = () => {
                     Sergej Japundža
                   </span>
                 </p>
-                <p className="text-lg sm:text-2xl py-2">
+                <p className="text-xl sm:text-2xl py-2">
                   I'm a passionate self-taught MERN stack developer hailing from
                   Sremska Mitrovica, Serbia. At the age of 23, I have already
                   embarked on an exciting journey in the world of web
                   development.
                 </p>
-                <div className="flex text-xl sm:text-2xl md:text-3xl mt-4">
+                <div className="flex text-xl md:text-2xl mt-4">
                   <button
                     className="text-accent-blue flex justify-center items-center hover:text-bright-orange group"
                     onClick={() => dispatch(setIsMobileModal())}

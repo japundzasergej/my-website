@@ -55,8 +55,13 @@ const Footer = () => {
               shapes clipart PNG Designed By akshaydhameliya
             </a>
           </span>
+          <span>
+            <a href="https://pngtree.com/freepng/blue-geometric-shape-with-dot-line_3719431.html?sol=downref&id=bef">
+              background PNG Designed By pio_pio
+            </a>
+          </span>
         </div>
-        <SocialMedia size={`${isDesktop? 50 : 30}`} />
+        <SocialMedia size={`${isDesktop ? 50 : 30}`} />
         <div className="md:mx-auto text-center font-semibold md:text-base text-sm p-2">
           <p>Sergej Japundža</p>
           <p>Sremska Mitrovica</p>

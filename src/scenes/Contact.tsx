@@ -187,7 +187,7 @@ const Contact = () => {
                 </div>
               )}
               <textarea
-                rows={isLarge ? 5 : 8}
+                rows={5}
                 cols={isMedium ? 35 : 20}
                 className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-2xl font-playfair font-semibold focus:outline-none"
                 placeholder="Your message here..."
