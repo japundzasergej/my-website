@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className={`${isLarge ? 'py-48' : 'py-24'} min-h-screen ${
+      className={`${isLarge ? 'py-48' : 'py-24'}  ${
         isDark ? 'bg-dark-contact' : 'bg-light-contact'
       } bg-cover bg-no-repeat `}
     >
@@ -214,8 +214,8 @@ const Contact = () => {
               )}
 
               <button
-                className="bg-gradient-mirage text-[#FFFFF0] rounded-md py-3 px-10 font-extrabold
-               hover:text-navy-blue transition duration-500 flex group lg:text-2xl text-xl mt-10"
+                className="bg-gradient-mirage text-[#FFFFF0] rounded-md py-3 px-12 font-extrabold
+               hover:text-navy-blue transition duration-500 flex group md:text-2xl text-xl mt-10"
                 type="submit"
               >
                 Submit{' '}
