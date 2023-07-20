@@ -141,7 +141,7 @@ const Navbar = () => {
               <AiOutlineClose
                 size={60}
                 onClick={() => dispatch(setIsMenuOpen())}
-                className="text-navy-blue"
+                className={`${isDark ? 'text-white' : 'text-navy-blue'}`}
               />
             </div>
             
