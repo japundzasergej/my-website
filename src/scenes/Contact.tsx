@@ -118,102 +118,102 @@ const Contact = () => {
             }}
           >
             <div className="flex flex-col justify-center items-center text-center">
-              <input
-                type="text"
-                className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none newScreen:text-xl 
-                newScreen:placeholder:text-xl md:placeholder:text-2xl"
-                placeholder="Enter your name..."
-                {...register('name', {
-                  required: true,
-                  maxLength: 15,
-                  minLength: 2,
-                })}
-                value={value.name}
-                onChange={handleChange}
-              />
-              {errors.name && (
-                <div className="flex flex-col items-center justify-center">
-                  <GoChevronUp size={30} className="text-red-900 mt-1" />
-                  <p className="text-red-900 text-base font-playfair mt-1">
-                    {errors.name.type === 'required' &&
-                      'This field is required.'}
-                    {errors.name.type === 'maxLength' &&
-                      'Max 15 characters allowed.'}
-                    {errors.name.type === 'minLength' &&
-                      'Name must be at least 2 characters long.'}
-                  </p>
-                </div>
-              )}
-              <input
-                type="email"
-                className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none mt-10 newScreen:text-xl
-                newScreen:placeholder:text-xl md:placeholder:text-2xl"
-                placeholder="Enter your email..."
-                {...register('email', {
-                  required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                })}
-                value={value.email}
-                onChange={handleChange}
-              />
-              {errors.email && (
-                <div className="flex justify-center flex-col items-center">
-                  <GoChevronUp size={30} className="text-red-900 mt-1" />
-                  <p className="text-red-900 text-base font-playfair">
-                    {errors.email.type === 'required' && 'Email required.'}
-                    {errors.email.type === 'pattern' && 'Invalid email.'}
-                  </p>
-                </div>
-              )}
-              <input
-                type="text"
-                className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold newScreen:text-xl text-2xl focus:outline-none my-10 newScreen:placeholder:text-xl md:placeholder:text-2xl placeholder:text-xl "
-                placeholder="Enter your company name... (optional)"
-                {...register('company', {
-                  required: false,
-                  minLength: 2,
-                  maxLength: 15,
-                })}
-                value={value.company}
-                onChange={handleChange}
-              />
-              {errors.company && (
-                <div className="flex justify-center flex-col items-center">
-                  <GoChevronUp size={30} className="text-red-900 mt-1" />
-                  <p className="text-red-900 text-base font-playfair">
-                    {errors.company.type === 'maxLength' &&
-                      'You have exceeded the maximum length of 15 characters.'}
-                    {errors.company.type === 'minLength' &&
-                      'Company name must be at least 2 characters long.'}
-                  </p>
-                </div>
-              )}
-              <textarea
-                rows={5}
-                cols={isMedium ? 35 : 20}
-                className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-2xl font-playfair font-semibold focus:outline-none placeholder:text-2xl"
-                placeholder="Your message here..."
-                {...register('message', {
-                  required: true,
-                  maxLength: 300,
-                  minLength: 10,
-                })}
-                value={value.message}
-                onChange={handleChange}
-              ></textarea>
-              {errors.message && (
-                <div className="flex justify-center flex-col items-center">
-                  <GoChevronUp size={30} className="text-red-900 mt-1" />
-                  <p className="text-red-900 text-base font-playfair">
-                    {errors.message.type === 'required' &&
-                      'This field is required.'}
-                    {errors.message.type === 'maxLength' &&
-                      'You have exceeded the maximum length of 300 characters.'}
-                    {errors.message.type === 'minLength' &&
-                      'Message must be at least 10 characters long.'}
-                  </p>
-                </div>
-              )}
+              <div className="text-navy-blue font-playfair font-semibold newScreen:text-xl text-3xl focus:outline-none">
+                <input
+                  type="text"
+                  className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
+                  placeholder="Enter your name..."
+                  {...register('name', {
+                    required: true,
+                    maxLength: 15,
+                    minLength: 2,
+                  })}
+                  value={value.name}
+                  onChange={handleChange}
+                />
+                {errors.name && (
+                  <div className="flex flex-col items-center justify-center">
+                    <GoChevronUp size={30} className="text-red-900 mt-1" />
+                    <p className="text-red-900 text-lg md:text-xl font-playfair mt-1">
+                      {errors.name.type === 'required' &&
+                        'This field is required.'}
+                      {errors.name.type === 'maxLength' &&
+                        'Max 15 characters allowed.'}
+                      {errors.name.type === 'minLength' &&
+                        'Name must be at least 2 characters long.'}
+                    </p>
+                  </div>
+                )}
+                <input
+                  type="email"
+                  className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm  mt-10 placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
+                  placeholder="Enter your email..."
+                  {...register('email', {
+                    required: true,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  })}
+                  value={value.email}
+                  onChange={handleChange}
+                />
+                {errors.email && (
+                  <div className="flex justify-center flex-col items-center">
+                    <GoChevronUp size={30} className="text-red-900 mt-1" />
+                    <p className="text-red-900 font-playfair text-lg md:text-xl">
+                      {errors.email.type === 'required' && 'Email required.'}
+                      {errors.email.type === 'pattern' && 'Invalid email.'}
+                    </p>
+                  </div>
+                )}
+                <input
+                  type="text"
+                  className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] my-10 p-2 bg-light-beige rounded-sm placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
+                  placeholder="Enter your company name... (optional)"
+                  {...register('company', {
+                    required: false,
+                    minLength: 2,
+                    maxLength: 15,
+                  })}
+                  value={value.company}
+                  onChange={handleChange}
+                />
+                {errors.company && (
+                  <div className="flex justify-center flex-col items-center">
+                    <GoChevronUp size={30} className="text-red-900 mt-1" />
+                    <p className="text-red-900 font-playfair text-lg md:text-xl">
+                      {errors.company.type === 'maxLength' &&
+                        'You have exceeded the maximum length of 15 characters.'}
+                      {errors.company.type === 'minLength' &&
+                        'Company name must be at least 2 characters long.'}
+                    </p>
+                  </div>
+                )}
+                <textarea
+                  rows={5}
+                  cols={isMedium ? 35 : 20}
+                  className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-3xl font-playfair font-semibold focus:outline-none md:placeholder:text-3xl placeholder:text-2xl"
+                  placeholder="Your message here..."
+                  {...register('message', {
+                    required: true,
+                    maxLength: 300,
+                    minLength: 10,
+                  })}
+                  value={value.message}
+                  onChange={handleChange}
+                ></textarea>
+                {errors.message && (
+                  <div className="flex justify-center flex-col items-center">
+                    <GoChevronUp size={30} className="text-red-900 mt-1" />
+                    <p className="text-red-900 font-playfair text-lg md:text-xl">
+                      {errors.message.type === 'required' &&
+                        'This field is required.'}
+                      {errors.message.type === 'maxLength' &&
+                        'You have exceeded the maximum length of 300 characters.'}
+                      {errors.message.type === 'minLength' &&
+                        'Message must be at least 10 characters long.'}
+                    </p>
+                  </div>
+                )}
+              </div>
 
               <button
                 className="bg-gradient-mirage text-[#FFFFF0] rounded-md newScreen:py-4 md:px-14 py-6 px-16 font-extrabold
