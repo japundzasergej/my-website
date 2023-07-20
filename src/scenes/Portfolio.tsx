@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useAppSelector } from '../hooks/useTypedHooks';
 
 import Line from '../components/Line';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const container = {
   hidden: {},
@@ -27,7 +28,9 @@ const Project = ({ title }: ProjectType) => {
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="widescreen:text-5xl text-2xl font-playfair mt-20">{title}</p>
+        <p className="widescreen:text-5xl text-2xl font-playfair mt-20">
+          {title}
+        </p>
         <p className="mt-7 widescreen:text-2xl text-xl">
           Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
           porttitor accumsan tincidunt.
@@ -54,6 +57,7 @@ const Project = ({ title }: ProjectType) => {
 
 const Portfolio = () => {
   const isDark = useAppSelector((state) => state.portfolio.isDark);
+  const isDesktop = useMediaQuery('(min-width: 1040px)');
 
   return (
     <section
@@ -89,7 +93,7 @@ const Portfolio = () => {
           Coming soon!
         </p>
         <Line
-          custom={`w-1/2 ${
+          custom={`${isDesktop ? 'max-w-[300px]' : 'max-w-[150px]'} ${
             isDark ? 'bg-gradient-rainblue' : 'bg-gradient-mirage'
           } h-1 mx-auto mt-6 newScreen:mb-10 mb-24`}
         />
