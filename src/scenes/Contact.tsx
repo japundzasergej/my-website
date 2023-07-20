@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className={`${isLarge ? 'py-64' : 'py-72'}  ${
+      className={`${isLarge ? 'py-64' : 'py-32'}  ${
         isDark ? 'bg-dark-contact' : 'bg-light-contact'
       } bg-cover bg-no-repeat `}
     >
@@ -120,7 +120,7 @@ const Contact = () => {
             <div className="flex flex-col justify-center items-center text-center">
               <input
                 type="text"
-                className="md:w-[600px] w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none"
+                className="md:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none"
                 placeholder="Enter your name..."
                 {...register('name', {
                   required: true,
@@ -145,7 +145,7 @@ const Contact = () => {
               )}
               <input
                 type="email"
-                className="md:w-[600px] w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none mt-10"
+                className="md:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none mt-10"
                 placeholder="Enter your email..."
                 {...register('email', {
                   required: true,
@@ -165,7 +165,7 @@ const Contact = () => {
               )}
               <input
                 type="text"
-                className="md:w-[600px] w-[400px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none my-10"
+                className="md:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue font-playfair font-semibold text-xl focus:outline-none my-10"
                 placeholder="Enter your company name... (optional)"
                 {...register('company', {
                   required: false,
@@ -187,7 +187,7 @@ const Contact = () => {
                 </div>
               )}
               <textarea
-                rows={5}
+                rows={isLarge ? 5 : 8}
                 cols={isMedium ? 35 : 20}
                 className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-2xl font-playfair font-semibold focus:outline-none"
                 placeholder="Your message here..."
@@ -214,7 +214,7 @@ const Contact = () => {
               )}
 
               <button
-                className="bg-gradient-mirage text-[#FFFFF0] rounded-md py-3 px-12 font-extrabold
+                className="bg-gradient-mirage text-[#FFFFF0] rounded-md newScreen:py-4 px-14 py-6 px-16 font-extrabold
                hover:text-navy-blue transition duration-500 flex group md:text-2xl text-xl mt-10"
                 type="submit"
               >
