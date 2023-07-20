@@ -40,7 +40,7 @@ const Experience = () => {
       id="experience"
       className={`py-48 ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'}  `}
     >
-      <article className="flex flex-col justify-center items-center relative">
+      <article className="flex flex-col justify-center items-center">
         <motion.div
           className={`text-6xl font-aileron ${
             isDark ? 'text-metallic' : 'text-white'
@@ -66,7 +66,7 @@ const Experience = () => {
         </motion.div>
         <div className="md:p-20 p-14 z-30 bg-metallic widescreen:w-4/6 w-5/6 rounded-lg font-aileron font-bold text-navy-blue flex justify-center items-center">
           <motion.div
-            className="grid newScreen:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-y-10 md:gap-x-40 gap-x-20 items-center"
+            className="grid newScreen:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-y-10 md:gap-x-36 gap-x-20 items-center"
             variants={container}
             initial="hidden"
             whileInView="visible"

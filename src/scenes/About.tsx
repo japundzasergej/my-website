@@ -18,7 +18,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className={`min-h-screen ${
+      className={`${
         isDark ? 'bg-dark-about' : 'bg-about'
       } bg-no-repeat bg-cover flex items-center justify-center ${isDesktop ? 'py-48' : 'py-24'}`}
     >
@@ -277,7 +277,7 @@ const About = () => {
                   </p>
                   <button
                     onClick={() => dispatch(setIsMobileModal())}
-                    className="p-2 bg-bright-orange w-1/2 rounded-md text-lg mt-4 hover:opacity-75  duration-300 font-aileron font-semibold"
+                    className="p-2 bg-bright-orange w-1/2 rounded-md md:text-2xl text-xl mt-12 hover:opacity-75  duration-300 font-aileron font-semibold"
                   >
                     Close
                   </button>

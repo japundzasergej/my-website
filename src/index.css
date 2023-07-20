@@ -95,8 +95,3 @@
   }
 }
 
-@layer utilities {
-  .min-section-height {
-    min-height: calc(100vh-'188px');
-  }
-}
