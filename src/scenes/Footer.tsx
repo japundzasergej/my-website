@@ -1,6 +1,9 @@
 import SocialMedia from '../components/SocialMedia';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const Footer = () => {
+  const isDesktop = useMediaQuery('(min-width: 1040px)');
+
   return (
     <section className="w-full min-h-20 bg-light-beige">
       <article className="flex justify-between items-center px-2 py-4">
@@ -53,7 +56,7 @@ const Footer = () => {
             </a>
           </span>
         </div>
-        <SocialMedia />
+        <SocialMedia size={`${isDesktop? 50 : 30}`} />
         <div className="md:mx-auto text-center font-semibold md:text-base text-sm p-2">
           <p>Sergej Japundža</p>
           <p>Sremska Mitrovica</p>

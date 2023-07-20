@@ -90,7 +90,7 @@ const Landing = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <SocialMedia />
+          <SocialMedia size={60} />
         </motion.div>
       </motion.div>
     </section>
