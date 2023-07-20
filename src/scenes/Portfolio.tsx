@@ -62,7 +62,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className={`${isDesktop ? 'py-64' : 'py-96'} ${
+      className={`${isDesktop ? 'py-64' : 'py-48'} ${
         isDark ? 'bg-dark-bg' : 'bg-bright-orange'
       } `}
     >
@@ -111,7 +111,7 @@ const Portfolio = () => {
         >
           <div
             className="flex justify-center text-center items-center p-10 bg-sky-blue
-              max-w-[400px] max-h-[400px] widescreen:text-3xl text-xl font-playfair font-light text-navy-blue mx-auto"
+              max-w-[600px] max-h-[600px] widescreen:text-4xl text-3xl font-playfair font-light text-navy-blue mx-auto"
           >
             <p>
               <span className="text-blue-accent">elegant</span> user interfaces
@@ -123,7 +123,7 @@ const Portfolio = () => {
 
           <div
             className="flex justify-center text-center items-center p-10 bg-metallic
-              max-w-[400px] max-h-[400px] widescreen:text-2xl text-lg font-playfair font-light text-navy-blue mx-auto  widescreen:mt-0 mt-10"
+              max-w-[600px] max-h-[600px] widescreen:text-3xl text-2xl font-playfair font-light text-navy-blue mx-auto  widescreen:mt-0 mt-10"
           >
             <p>
               streamlined user{' '}
