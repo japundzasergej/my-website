@@ -22,6 +22,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 
 type Links = { id: number; link: string };
+type Links2 = { id: number; link: string, title:string };
 
 
 const Navbar = () => {
@@ -32,19 +33,26 @@ const Navbar = () => {
     { id: 4, link: 'experience' },
     { id: 5, link: 'contact' },
   ];
+  const links2: Links2[] = [
+    { id: 1, link: 'm-home', title: 'home' },
+    { id: 2, link: 'm-about', title: 'about' },
+    { id: 3, link: 'm-portfolio', title: 'portfolio' },
+    { id: 4, link: 'm-experience', title: 'experience'  },
+    { id: 5, link: 'm-contact', title: 'contact'  },
+  ];
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.4,
+        staggerChildren: 0.2,
         duration: 0.2,
       },
     },
   };
 
   const item = {
-    hidden: { x: -600 },
+    hidden: { x: -800 },
     show: {
       x: 0,
     },
@@ -121,7 +129,7 @@ const Navbar = () => {
           <motion.div
             className={`fixed top-0 right-0 ${
               isDark ? 'bg-dark-grey' : 'bg-bright-orange'
-            } w-full py-24 flex flex-col justify-center items-center gap-4`}
+            } w-full h-screen flex flex-col justify-center items-center gap-4`}
             initial={{
               y: -100,
               opacity: 0,
@@ -129,52 +137,27 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, when: 'beforeChildren' }}
           >
-            <div className="absolute top-0 right-0 px-4 py-2 cursor-pointer">
+            <div className="absolute top-2 right-4 px-4 py-2 cursor-pointer z-30">
               <AiOutlineClose
-                size={40}
+                size={60}
                 onClick={() => dispatch(setIsMenuOpen())}
-                className="text-metallic"
+                className="text-navy-blue"
               />
             </div>
-            <motion.div
-              className={`relative mt-24 px-10 py-20 min-w-[300px] ${
-                isDark ? 'bg-light-beige' : 'bg-navy-blue'
-              } w-2/6 mx-auto text-center shadow-md shadow-black ${
-                isDark ? 'darkLogo' : 'lightLogo'
-              } before:absolute before:-top-72 before:-left-20 before:p-2 before:scale-25 before:-translate-x-8 rounded-xl`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              <p
-                className={`text-5xl ${
-                  isDark ? 'text-navy-blue' : 'text-metallic shadow-sm'
-                } font-noto font-semibold`}
-              >
-                Sergej{' '}
-                <div className="py-4">
-                  <span
-                    className={`${
-                      isDark ? 'text-blue-accent' : 'text-bright-orange'
-                    }`}
-                  >
-                    Japundža
-                  </span>
-                </div>
-              </p>
-            </motion.div>
-            <motion.div variants={container} initial="hidden" animate="show">
-              {links.map(({ id, link }) => (
+            
+            <motion.div variants={container} initial="hidden" animate="show" className='z-40'>
+              {links2.map(({ id, link, title }) => (
                 <motion.div
                   key={id}
-                  className={`text-left min-w-[200px] relative text-3xl text-black py-5 font-semibold ${link} before:absolute before:-left-8 py-2 text-white border-b-2 flex justify-center border-sky-blue font-noto cursor-pointer`}
+                  className={`text-left min-w-[200px] relative md:text-7xl sm:text-6xl text-5xl text-black py-5 font-extrabold ${link} before:absolute md:before:-left-28 before:-left-20 before:top-10 py-8 text-navy-blue border-b-2 flex justify-center border-sky-blue font-noto cursor-pointer`}
                   variants={item}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <AnchorLink href={`#${link}`} onClick={() => dispatch(setIsMenuOpen())}>{link.toUpperCase()}</AnchorLink>
+                  <AnchorLink href={`#${title}`} onClick={() => dispatch(setIsMenuOpen())}>{title.toUpperCase()}</AnchorLink>
                 </motion.div>
               ))}
             </motion.div>
+            <div className='bg-abstract absolute h-full w-full bg-cover z-0'></div>
           </motion.div>
         )}
       </article>

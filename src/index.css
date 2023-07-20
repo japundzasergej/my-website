@@ -31,6 +31,26 @@
     --tw-content: url('./assets/contact.png');
     content: var(--tw-content);
   }
+  .m-home::before {
+    --tw-content: url('./assets/m-home.png');
+    content: var(--tw-content);
+  }
+  .m-about::before {
+    --tw-content: url('./assets/m-about.png');
+    content: var(--tw-content);
+  }
+  .m-portfolio::before {
+    --tw-content: url('./assets/m-portfolio.png');
+    content: var(--tw-content);
+  }
+  .m-experience::before {
+    --tw-content: url('./assets/m-experience.png');
+    content: var(--tw-content);
+  }
+  .m-contact::before {
+    --tw-content: url('./assets/m-contact.png');
+    content: var(--tw-content);
+  }
   .off::before {
     --tw-content: url('./assets/off-button.png');
     content: var(--tw-content);
@@ -69,6 +89,9 @@
   }
   .bg-dark-contact {
     background-image: url('./assets/dark-contact.svg');
+  }
+  .bg-abstract {
+    background-image: url('./assets//abstract-bg.png');
   }
 }
 
