@@ -119,8 +119,9 @@ const Navbar = () => {
               className="flex items-center justify-center cursor-pointer mx-auto"
               whileTap={{
                 rotate: 360,
+                scale: 0.6
               }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.12 }}
             >
               <RxHamburgerMenu
                 size={60}
@@ -140,7 +141,7 @@ const Navbar = () => {
               opacity: 0,
             }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, when: 'beforeChildren' }}
+            transition={{ duration: 0.05, when: 'beforeChildren' }}
           >
             <div className="absolute top-2 right-4 px-4 py-2 cursor-pointer z-30">
               <AiOutlineClose
