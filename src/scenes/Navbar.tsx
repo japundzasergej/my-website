@@ -121,7 +121,7 @@ const Navbar = () => {
           <motion.div
             className={`fixed top-0 right-0 ${
               isDark ? 'bg-dark-grey' : 'bg-bright-orange'
-            } w-full h-full flex flex-col justify-center items-center gap-4`}
+            } w-full py-24 flex flex-col justify-center items-center gap-4`}
             initial={{
               y: -100,
               opacity: 0,
@@ -137,7 +137,7 @@ const Navbar = () => {
               />
             </div>
             <motion.div
-              className={`relative mb-10 mt-36 px-10 py-20 min-w-[300px] ${
+              className={`relative mt-24 px-10 py-20 min-w-[300px] ${
                 isDark ? 'bg-light-beige' : 'bg-navy-blue'
               } w-2/6 mx-auto text-center shadow-md shadow-black ${
                 isDark ? 'darkLogo' : 'lightLogo'

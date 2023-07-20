@@ -17,7 +17,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className={`lg:flex lg:justify-start justify-center items-center h-screen py-10 ${
+      className={`lg:flex lg:justify-start justify-center items-center py-52 ${
         isDark ? 'bg-dark-bg' : 'bg-bright-orange'
       } bg-cover bg-no-repeat`}
     >
@@ -39,7 +39,7 @@ const Landing = () => {
         <img src={newHero} alt="hero" className="w-screen max-h-[440px] sm:max-h-[540px] md:max-h-[610px]" />
       )}
       <motion.div
-        className="z-30 lg:mt-32 lg:ml-12 text-metallic"
+        className="z-30 mt-40 ml-4 widescreen:mt-32 widescreen:ml-12 text-metallic"
         variants={{
           hidden: { opacity: 0, x: -50 },
           show: { opacity: 1, x: 0 },
