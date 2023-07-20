@@ -5,6 +5,8 @@ import darkLogo from '../assets/dark.ico';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import nightMode from '../assets/night-mode.png';
 import lNightMode from '../assets/l-night-mode.png';
+import mNightMode from '../assets/m-night-mode.png'
+import mLightMode from '../assets/m-l-night-mode.png'
 
 import { motion } from 'framer-motion';
 
@@ -61,11 +63,11 @@ const Navbar = () => {
         !isTopOfPage || !isDesktop
           ? `${isDark ? 'bg-dark-grey' : 'bg-navy-blue'}`
           : ''
-      } h-20 fixed z-40`}
+      } ${isDesktop ? 'h-20' : 'h-32'} fixed z-40`}
     >
       <article className="flex justify-between h-full w-full">
-        <div className=" flex justify-center items-center widescreen:mx-auto md:mr-4 ml-2">
-          <img src={isDark ? darkLogo : lightLogo} alt="logo" />
+        <div className=" flex justify-center items-center mx-auto">
+          <img src={isDark ? darkLogo : lightLogo} alt="logo"/>
         </div>
         {isDesktop ? (
           <div className="flex widescreen:gap-12 gap-8 md:mx-auto py-6 lg:text-lg text-sm font-noto">
@@ -90,25 +92,25 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <div className="flex justify-center items-center ml-16">
+            <div className="flex justify-center items-center mx-auto">
               <button
                 className={`${
-                  isDark ? 'toggle' : 'off '
-                } relative before:absolute before:content-start before:-left-9 before:top-0`}
+                  isDark ? 'm-toggle' : 'm-off '
+                } relative before:absolute before:content-start before:-right-20 before:top-0 `}
                 onClick={() => dispatch(setIsDark())}
               >
-                <img src={isDark ? nightMode : lNightMode} alt="night mode" />
+                <img src={isDark ? mLightMode : mNightMode} alt="night mode"  />
               </button>
             </div>
             <motion.div
-              className="flex items-center justify-center px-2 cursor-pointer"
+              className="flex items-center justify-center cursor-pointer mx-auto"
               whileTap={{
                 rotate: 360,
               }}
               transition={{ duration: 0.2 }}
             >
               <RxHamburgerMenu
-                size={50}
+                size={60}
                 onClick={() => dispatch(setIsMenuOpen())}
                 className="text-metallic"
               />
@@ -119,7 +121,7 @@ const Navbar = () => {
           <motion.div
             className={`fixed top-0 right-0 ${
               isDark ? 'bg-dark-grey' : 'bg-bright-orange'
-            } w-full h-screen flex flex-col justify-center items-center gap-4`}
+            } w-full h-full flex flex-col justify-center items-center gap-4`}
             initial={{
               y: -100,
               opacity: 0,

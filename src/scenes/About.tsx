@@ -285,7 +285,7 @@ const About = () => {
               </div>
             ) : (
               <motion.div
-                className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center md:p-20 sm:p-16 p-10 rounded-md shadow-md font-semibold text-navy-blue font-playfair"
+                className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center md:p-36 sm:p-24  p-16 rounded-md shadow-md font-semibold text-navy-blue font-playfair"
                 variants={{
                   hidden: { opacity: 0 },
                   show: { opacity: 1 },
@@ -295,7 +295,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="pb-4 text-4xl ">
+                <p className="pb-4 md:text-5xl text-3xl ">
                   <span className="underline underline-offset-8 decoration-sky-blue">
                     My name
                   </span>{' '}
@@ -308,13 +308,13 @@ const About = () => {
                     Sergej Japundža
                   </span>
                 </p>
-                <p className="text-lg sm:text-xl py-2">
+                <p className="text-lg sm:text-2xl py-2">
                   I'm a passionate self-taught MERN stack developer hailing from
                   Sremska Mitrovica, Serbia. At the age of 23, I have already
                   embarked on an exciting journey in the world of web
                   development.
                 </p>
-                <div className="flex text-xl sm:text-2xl mt-4">
+                <div className="flex text-xl sm:text-2xl md:text-3xl mt-4">
                   <button
                     className="text-accent-blue flex justify-center items-center hover:text-bright-orange group"
                     onClick={() => dispatch(setIsMobileModal())}
@@ -334,7 +334,7 @@ const About = () => {
                     </span>
                   </a>
                 </div>
-                <div className="w-full flex pt-10 text-center text-xl ">
+                <div className="w-full flex pt-10 text-center">
                   <div className="w-1/2 bg-navy-blue h-10 flex justify-between text-center md:text-xl text-lg text-metallic items-center hover:opacity-90 duration-300">
                     <a
                       className="mx-auto font-playfair font-light w-full"

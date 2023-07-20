@@ -10,7 +10,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import SocialMedia from '../components/SocialMedia';
 
 const Landing = () => {
-  const isDesktop = useMediaQuery('(min-width: 768px)');
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const isDark = useAppSelector((state) => state.portfolio.isDark);
   const dispatch = useAppDispatch();
 
@@ -36,10 +36,10 @@ const Landing = () => {
           <img src={newHero} alt="hero" />
         </motion.div>
       ) : (
-        <img src={newHero} alt="hero" className="w-screen max-h-[440px]" />
+        <img src={newHero} alt="hero" className="w-screen max-h-[440px] sm:max-h-[540px] md:max-h-[610px]" />
       )}
       <motion.div
-        className="z-30 md:ml-12 md:mt-[10rem] lg:mt-32  text-metallic"
+        className="z-30 lg:mt-32 lg:ml-12 text-metallic"
         variants={{
           hidden: { opacity: 0, x: -50 },
           show: { opacity: 1, x: 0 },
@@ -49,7 +49,7 @@ const Landing = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <p className="widescreen:text-6xl md:text-5xl text-4xl text-center lg:text-start font-semibold max-widescreen:xl">
+        <p className="widescreen:text-6xl sm:text-5xl text-4xl text-center lg:text-start font-semibold max-widescreen:xl">
           Hi, my name is{' '}
           <span className={`${isDark ? 'text-dark-accent' : 'text-navy-blue'}`}>
             Sergej
@@ -71,7 +71,7 @@ const Landing = () => {
           <AnchorLink
             href="#contact"
             className="bg-gradient-mirage text-[#FFFFF0] rounded-md py-3 px-4  widescreen:px-7 font-extrabold
-               hover:text-navy-blue transition duration-500 flex group"
+               hover:text-navy-blue transition duration-500 flex group text-2xl"
             onClick={() => dispatch(setSelectedPage('contact'))}
           >
             Let's get in touch!{' '}

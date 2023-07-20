@@ -39,6 +39,14 @@
     --tw-content: url('./assets/toggle-button.png');
     content: var(--tw-content);
   }
+  .m-toggle::before {
+    --tw-content: url('./assets/m-toggle-button.png');
+    content: var(--tw-content);
+  }
+  .m-off::before {
+    --tw-content: url('./assets/m-off-button.png');
+    content: var(--tw-content);
+  }
   .lightLogo::before {
     --tw-content: url('./assets/light.png');
     content: var(--tw-content);
