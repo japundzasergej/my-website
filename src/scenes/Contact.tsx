@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className={`${isLarge ? 'py-64' : 'py-96'}  ${
+      className={`${isLarge ? 'py-64' : 'py-72'}  ${
         isDark ? 'bg-dark-contact' : 'bg-light-contact'
       } bg-cover bg-no-repeat `}
     >

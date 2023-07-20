@@ -47,7 +47,7 @@ const App = () => {
       <header>
         <Navbar />
       </header>
-      <main className='w-screen'>
+      <main className="w-screen">
         <Landing />
         {isLarge ? <SelectedPages /> : <></>}
         <Line custom="w-full bg-gradient-mirage p-2" />
@@ -58,9 +58,10 @@ const App = () => {
         <Experience />
         <Line custom="w-full bg-gradient-mirage p-2" />
         <Contact />
+        <Line custom="w-full bg-gradient-mirage p-2" />
       </main>
-      <footer className='w-screen'>
-        <Footer/>
+      <footer className="w-screen">
+        <Footer />
       </footer>
     </>
   );

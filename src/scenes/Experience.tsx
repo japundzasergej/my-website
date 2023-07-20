@@ -41,7 +41,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className={`${isDesktop ? 'py-64' : 'py-96'} ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'}  `}
+      className={`${isDesktop ? 'py-64' : 'py-80'} ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'}  `}
     >
       <article className="flex flex-col justify-center items-center">
         <motion.div
