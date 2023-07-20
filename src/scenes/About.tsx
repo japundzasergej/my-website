@@ -11,7 +11,7 @@ const About = () => {
   const { isDark, isModal, isMobileModal } = useAppSelector(
     (state) => state.portfolio
   );
-  const isDesktop = useMediaQuery('(min-width: 760px)');
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const isLarge = useMediaQuery('(min-width: 1440px)');
   const dispatch = useAppDispatch();
 
@@ -150,9 +150,9 @@ const About = () => {
                     </span>
                   </button>
                   <div className="w-1/2 flex py-10 text-center text-xl ">
-                    <div className="w-1/2 bg-navy-blue h-10 flex justify-between text-center text-base widescreen:text-lg text-bright-orange items-center hover:opacity-90 duration-300">
+                    <div className="w-1/2 bg-navy-blue h-10 flex justify-between text-center text-base widescreen:text-lg text-metallic items-center hover:opacity-90 duration-300">
                       <a
-                        className="mx-auto font-aileron font-bold widescreen:w-full"
+                        className="mx-auto font-playfair font-light widescreen:w-full"
                         href="https://github.com/japundzasergej/my-website"
                         target="_blank"
                         rel="noreferrer"
@@ -164,9 +164,9 @@ const About = () => {
                         className="text-metallic mr-1 my-auto"
                       />
                     </div>
-                    <div className="w-1/2 bg-bright-orange h-10 flex text-center text-base bigscreen:text-lg text-navy-blue items-center hover:opacity-90 duration-300 text-ellipsis">
+                    <div className="w-1/2 bg-bright-orange h-10 flex text-center text-base bigscreen:text-lg text-white items-center hover:opacity-90 duration-300 text-ellipsis">
                       <a
-                        className="mx-auto font-aileron font-bold widescreen:w-full"
+                        className="mx-auto font-playfair font-light widescreen:w-full"
                         href="/cv.pdf"
                         download={true}
                       >
@@ -195,7 +195,7 @@ const About = () => {
               viewport={{ once: true, amount: 0.5 }}
             >
               <motion.div
-                className={`flex flex-col justify-center text-center items-center font-playfair font-semibold ${
+                className={`flex flex-col justify-center text-center items-center p-4 font-playfair font-semibold ${
                   isDark ? 'text-light-beige' : 'text-navy-blue'
                 }`}
                 variants={{
@@ -207,7 +207,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 1.8 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="lg:text-4xl text-2xl mb-2">
+                <p className="widescreen:text-4xl text-2xl mb-2">
                   Check out my{' '}
                   <span
                     className={`${
@@ -218,7 +218,7 @@ const About = () => {
                   </span>
                   !
                 </p>
-                <p className="lg:text-3xl text-xl py-28 px-2">
+                <p className="widescreen:text-2xl text-xl widescreen:py-28 widescreen:px-14 py-12 px-6">
                   There you can find the making-of-process of all of my
                   projects.
                 </p>
@@ -285,7 +285,7 @@ const About = () => {
               </div>
             ) : (
               <motion.div
-                className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center sm:p-20 p-10 rounded-md shadow-md font-semibold text-navy-blue font-playfair"
+                className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center md:p-20 sm:p-16 p-10 rounded-md shadow-md font-semibold text-navy-blue font-playfair"
                 variants={{
                   hidden: { opacity: 0 },
                   show: { opacity: 1 },
@@ -295,7 +295,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="pb-4 text-3xl ">
+                <p className="pb-4 text-4xl ">
                   <span className="underline underline-offset-8 decoration-sky-blue">
                     My name
                   </span>{' '}
@@ -308,13 +308,13 @@ const About = () => {
                     Sergej Japundža
                   </span>
                 </p>
-                <p className="text-base sm:text-lg py-2">
+                <p className="text-lg sm:text-xl py-2">
                   I'm a passionate self-taught MERN stack developer hailing from
                   Sremska Mitrovica, Serbia. At the age of 23, I have already
                   embarked on an exciting journey in the world of web
                   development.
                 </p>
-                <div className="flex text-base sm:text-lg mt-4">
+                <div className="flex text-xl sm:text-2xl mt-4">
                   <button
                     className="text-accent-blue flex justify-center items-center hover:text-bright-orange group"
                     onClick={() => dispatch(setIsMobileModal())}
@@ -335,23 +335,23 @@ const About = () => {
                   </a>
                 </div>
                 <div className="w-full flex pt-10 text-center text-xl ">
-                  <div className="w-1/2 bg-navy-blue h-10 flex justify-between text-center text-base text-bright-orange items-center hover:opacity-90 duration-300">
+                  <div className="w-1/2 bg-navy-blue h-10 flex justify-between text-center md:text-xl text-lg text-metallic items-center hover:opacity-90 duration-300">
                     <a
-                      className="mx-auto font-aileron font-semibold w-full"
+                      className="mx-auto font-playfair font-light w-full"
                       href="https://github.com/japundzasergej/my-website"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {isLarge ? 'Source Code' : 'Code'}
+                      Code
                     </a>
                     <BsCodeSlash
                       size={28}
                       className="text-metallic mr-1 my-auto"
                     />
                   </div>
-                  <div className="w-1/2 bg-bright-orange h-10 flex text-center text-base text-navy-blue items-center hover:opacity-90 duration-300 ">
+                  <div className="w-1/2 bg-bright-orange h-10 flex text-center md:text-xl text-lg text-white items-center hover:opacity-90 duration-300 ">
                     <a
-                      className="mx-auto font-aileron font-semibold w-full"
+                      className="mx-auto font-playfair font-light w-full"
                       href="/cv.pdf"
                       download={true}
                     >

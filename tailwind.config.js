@@ -25,7 +25,8 @@ export default {
         tallscreen: '700px',
         bigscreen: '1600px',
         midscreen: '1650px',
-        hugescreen: '1700px'
+        hugescreen: '1700px',
+        newScreen: '1024px'
       },
       fontFamily: {
         noto: 'Noto Sans, sans-serif',

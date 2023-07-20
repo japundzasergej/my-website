@@ -85,7 +85,7 @@ const Contact = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="lg:text-5xl text-2xl text-center lg:text-start font-semibold max-widescreen:xl text-metallic">
+            <p className="widescreen:text-5xl lg:text-4xl text-3xl text-center lg:text-start font-semibold max-widescreen:xl text-metallic ">
               Looking{' '}
               <span
                 className={`${isDark ? 'text-dark-accent' : 'text-navy-blue'}`}

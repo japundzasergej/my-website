@@ -27,12 +27,12 @@ const Project = ({ title }: ProjectType) => {
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="lg:text-2xl text-lg font-playfair mt-20">{title}</p>
-        <p className="mt-7">
+        <p className="widescreen:text-5xl text-2xl font-playfair mt-20">{title}</p>
+        <p className="mt-7 widescreen:text-2xl text-xl">
           Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
           porttitor accumsan tincidunt.
         </p>
-        <div className="flex justify-center mt-10 font-aileron font-bold lg:text-base text-sm pb-14">
+        <div className="flex justify-center mt-10 font-playfair font-light text-xl pb-14">
           <a
             href="#"
             className="bg-navy-blue p-2 w-1/2 rounded-tl-md rounded-bl-md text-metallic hover:scale-95 duration-200"
@@ -41,7 +41,7 @@ const Project = ({ title }: ProjectType) => {
           </a>
           <a
             href="#"
-            className="bg-sky-blue p-2 w-1/2 rounded-tr-md rounded-br-md hover:scale-95 duration-200 text-navy-blue"
+            className="bg-sky-blue p-2 w-1/2 rounded-tr-md rounded-br-md hover:scale-95 duration-200 text-black"
           >
             Code
           </a>
@@ -91,13 +91,13 @@ const Portfolio = () => {
         <Line
           custom={`w-1/2 ${
             isDark ? 'bg-gradient-rainblue' : 'bg-gradient-mirage'
-          } h-1 mx-auto mt-6 mb-10`}
+          } h-1 mx-auto mt-6 newScreen:mb-10 mb-24`}
         />
       </motion.div>
 
       <div className="flex justify-center ">
         <motion.div
-          className="sm:grid sm:grid-cols-3"
+          className="newScreen:grid newScreen:grid-cols-3"
           variants={container}
           initial="hidden"
           whileInView="visible"

@@ -17,13 +17,13 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className={`md:flex md:justify-start justify-center items-center h-screen py-10 ${
+      className={`lg:flex lg:justify-start justify-center items-center h-screen py-10 ${
         isDark ? 'bg-dark-bg' : 'bg-bright-orange'
       } bg-cover bg-no-repeat`}
     >
       {isDesktop ? (
         <motion.div
-          className="z-0 md:order-2 absolute mb-96 -translate-y-[120px]"
+          className="z-0 absolute lg:-translate-y-[160px] widescreen:-translate-y-[240px]"
           variants={{
             hidden: { opacity: 0 },
             show: { opacity: 1 },
@@ -39,7 +39,7 @@ const Landing = () => {
         <img src={newHero} alt="hero" className="w-screen max-h-[440px]" />
       )}
       <motion.div
-        className="z-30 md:ml-12 md:mt-48 lg:mt-32  text-metallic"
+        className="z-30 md:ml-12 md:mt-[10rem] lg:mt-32  text-metallic"
         variants={{
           hidden: { opacity: 0, x: -50 },
           show: { opacity: 1, x: 0 },
@@ -49,7 +49,7 @@ const Landing = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <p className="lg:text-6xl  text-4xl text-center lg:text-start font-semibold max-widescreen:xl">
+        <p className="widescreen:text-6xl md:text-5xl text-4xl text-center lg:text-start font-semibold max-widescreen:xl">
           Hi, my name is{' '}
           <span className={`${isDark ? 'text-dark-accent' : 'text-navy-blue'}`}>
             Sergej
