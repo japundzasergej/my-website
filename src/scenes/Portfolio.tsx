@@ -62,7 +62,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className={`py-48 ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'} `}
+      className={`${isDesktop ? 'py-64' : 'py-96'} ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'} `}
     >
       <motion.div
         className="md:w-2/5 mx-auto text-center"

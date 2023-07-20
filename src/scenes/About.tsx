@@ -20,7 +20,7 @@ const About = () => {
       id="about"
       className={`${
         isDark ? 'bg-dark-about' : 'bg-about'
-      } bg-no-repeat bg-cover flex items-center justify-center ${isDesktop ? 'py-64' : 'py-48'}`}
+      } bg-no-repeat bg-cover flex items-center justify-center ${isDesktop ? 'py-64' : 'py-96'}`}
     >
       <article className="flex flex-col justify-center items-center w-full h-full">
         {isMobileModal ? (

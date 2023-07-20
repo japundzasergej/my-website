@@ -1,4 +1,5 @@
 import Line from '../components/Line';
+import useMediaQuery from '../hooks/useMediaQuery';
 import { useAppSelector } from '../hooks/useTypedHooks';
 import { motion } from 'framer-motion';
 
@@ -35,10 +36,12 @@ const Experience = () => {
     { id: 13, src: 'github', style: 'shadow-blue-accent' },
   ];
 
+  const isDesktop = useMediaQuery('(min-width: 1040px)');
+
   return (
     <section
       id="experience"
-      className={`py-48 ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'}  `}
+      className={`${isDesktop ? 'py-64' : 'py-96'} ${isDark ? 'bg-dark-bg' : 'bg-bright-orange'}  `}
     >
       <article className="flex flex-col justify-center items-center">
         <motion.div

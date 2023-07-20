@@ -17,7 +17,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className={`lg:flex lg:justify-start justify-center items-center ${isDesktop ? 'py-64' : 'py-48'} ${
+      className={`lg:flex lg:justify-start justify-center items-center ${isDesktop ? 'py-64' : 'py-96'} ${
         isDark ? 'bg-dark-bg' : 'bg-bright-orange'
       } bg-cover bg-no-repeat`}
     >
