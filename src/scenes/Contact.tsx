@@ -134,7 +134,7 @@ const Contact = () => {
                 {errors.name && (
                   <div className="flex flex-col items-center justify-center">
                     <GoChevronUp size={30} className="text-red-900 mt-1" />
-                    <p className="text-red-900 text-lg md:text-xl font-playfair mt-1">
+                    <p className="text-red-900 text-xl md:text-3xl font-playfair mt-1 lg:text-2xl">
                       {errors.name.type === 'required' &&
                         'This field is required.'}
                       {errors.name.type === 'maxLength' &&
@@ -158,7 +158,7 @@ const Contact = () => {
                 {errors.email && (
                   <div className="flex justify-center flex-col items-center">
                     <GoChevronUp size={30} className="text-red-900 mt-1" />
-                    <p className="text-red-900 font-playfair text-lg md:text-xl">
+                    <p className="text-red-900 font-playfair text-xl md:text-3xl lg:text-2xl">
                       {errors.email.type === 'required' && 'Email required.'}
                       {errors.email.type === 'pattern' && 'Invalid email.'}
                     </p>
@@ -177,9 +177,9 @@ const Contact = () => {
                   onChange={handleChange}
                 />
                 {errors.company && (
-                  <div className="flex justify-center flex-col items-center">
+                  <div className="flex justify-center flex-col items-center mb-6">
                     <GoChevronUp size={30} className="text-red-900 mt-1" />
-                    <p className="text-red-900 font-playfair text-lg md:text-xl">
+                    <p className="text-red-900 font-playfair lg:text-2xl text-xl md:text-3xl">
                       {errors.company.type === 'maxLength' &&
                         'You have exceeded the maximum length of 15 characters.'}
                       {errors.company.type === 'minLength' &&
@@ -203,7 +203,7 @@ const Contact = () => {
                 {errors.message && (
                   <div className="flex justify-center flex-col items-center">
                     <GoChevronUp size={30} className="text-red-900 mt-1" />
-                    <p className="text-red-900 font-playfair text-lg md:text-xl">
+                    <p className="text-red-900 font-playfair text-xl md:text-3xl lg:text-2xl">
                       {errors.message.type === 'required' &&
                         'This field is required.'}
                       {errors.message.type === 'maxLength' &&
