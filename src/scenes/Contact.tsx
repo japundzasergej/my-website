@@ -216,7 +216,7 @@ const Contact = () => {
               </div>
 
               <button
-                className="bg-gradient-mirage text-[#FFFFF0] rounded-md newScreen:py-4 md:px-14 py-6 px-16 font-extrabold
+                className="bg-gradient-mirage text-[#FFFFF0] rounded-md  md:px-14 py-4 px-16 font-extrabold
                hover:text-navy-blue transition duration-500 flex group md:text-2xl text-xl mt-10"
                 type="submit"
               >

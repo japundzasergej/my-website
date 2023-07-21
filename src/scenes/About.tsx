@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { GoChevronRight } from 'react-icons/go';
 import { BsCodeSlash } from 'react-icons/bs';
 import { FaRegFilePdf } from 'react-icons/fa';
+import Para from '../components/Para';
 
 const About = () => {
   const { isDark, isModal, isMobileModal } = useAppSelector(
@@ -60,42 +61,7 @@ const About = () => {
               {isModal ? (
                 <div className="flex flex-col ">
                   <div className="bigscreen:text-base lg:text-sm text-xs font-playfair font-bold widescreen:p-10 p-4">
-                    <p>
-                      Over the course of three months, I dedicated myself to
-                      honing my skills and mastering the MERN (MongoDB, Express,
-                      React, Node.js) stack. Through countless hours of
-                      self-study and hands-on projects, I have developed a
-                      strong foundation in building robust and scalable web
-                      applications.
-                    </p>
-                    <p className="py-4">
-                      When it comes to front-end development, I rely on
-                      TypeScript and React as my go-to tools. The combination of
-                      these technologies empowers me to create dynamic and
-                      interactive user interfaces with ease. To boost my
-                      development workflow, I leverage Vite.js as my build tool,
-                      allowing me to deliver performant applications quickly and
-                      efficiently.
-                    </p>
-                    <p className="mb-2">
-                      Furthermore, I have a deep understanding of the importance
-                      of effective state management in complex applications.
-                      That's why I embrace Redux Toolkit, a powerful library
-                      that simplifies state management and helps me maintain a
-                      well-structured codebase.
-                    </p>
-                    <p className="mb-2">
-                      I take pride in my ability to tackle challenges head-on
-                      and find innovative solutions. With every project, I
-                      strive to push the boundaries of what's possible and
-                      deliver exceptional results.
-                    </p>
-                    <p>
-                      Thank you for visiting my website, and I{' '}
-                      <span className="text-bright-orange">
-                        look forward to connecting with you soon!
-                      </span>
-                    </p>
+                    <Para option={false} isMobile={false}/>
                     <button
                       onClick={() => dispatch(setIsModal())}
                       className="p-2 bg-bright-orange w-1/2 rounded-md text-lg mt-4 hover:opacity-75  duration-300 font-aileron font-semibold"
@@ -121,25 +87,7 @@ const About = () => {
                   initial="hidden"
                   whileInView="show"
                 >
-                  <p className="mb-2 text-2xl widescreen:text-4xl">
-                    <span className="underline underline-offset-8 decoration-sky-blue">
-                      My name
-                    </span>{' '}
-                    is{' '}
-                    <span
-                      className={`${
-                        isDark ? 'text-dark-accent' : 'text-bright-orange'
-                      }`}
-                    >
-                      Sergej Japundža
-                    </span>
-                  </p>
-                  <p className="p-10 lg:text-2xl text-lg">
-                    I'm a passionate self-taught MERN stack developer hailing
-                    from Sremska Mitrovica, Serbia. At the age of 22, I have
-                    already embarked on an exciting journey in the world of web
-                    development.
-                  </p>
+                  <Para option={true} isMobile={false} />
                   <button
                     className="text-accent-blue flex justify-center items-center hover:text-bright-orange group"
                     onClick={() => dispatch(setIsModal())}
@@ -239,49 +187,14 @@ const About = () => {
         ) : (
           <article className="w-screen flex justify-center items-center mt-10 ">
             {isMobileModal ? (
-              <div className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center rounded-md shadow-md font-semibold text-navy-blue font-playfair h-[800px] text-sm sm:text-lg md:text-xl p-10">
-                <div>
-                  <p>
-                    Over the course of three months, I dedicated myself to
-                    honing my skills and mastering the MERN (MongoDB, Express,
-                    React, Node.js) stack. Through countless hours of self-study
-                    and hands-on projects, I have developed a strong foundation
-                    in building robust and scalable web applications.
-                  </p>
-                  <p>
-                    When it comes to front-end development, I rely on TypeScript
-                    and React as my go-to tools. The combination of these
-                    technologies empowers me to create dynamic and interactive
-                    user interfaces with ease. To boost my development workflow,
-                    I leverage Vite.js as my build tool, allowing me to deliver
-                    performant applications quickly and efficiently.
-                  </p>
-                  <p>
-                    Furthermore, I have a deep understanding of the importance
-                    of effective state management in complex applications.
-                    That's why I embrace Redux Toolkit, a powerful library that
-                    simplifies state management and helps me maintain a
-                    well-structured codebase.
-                  </p>
-                  <p>
-                    I take pride in my ability to tackle challenges head-on and
-                    find innovative solutions. With every project, I strive to
-                    push the boundaries of what's possible and deliver
-                    exceptional results.
-                  </p>
-                  <p>
-                    Thank you for visiting my website, and I{' '}
-                    <span className="text-bright-orange">
-                      look forward to connecting with you soon!
-                    </span>
-                  </p>
+              <div className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center rounded-md shadow-md font-semibold text-navy-blue font-playfair h-[800px] text-sm sm:text-base md:text-xl p-10">
+                  <Para option={false} isMobile={false}/>
                   <button
                     onClick={() => dispatch(setIsMobileModal())}
                     className="p-2 bg-bright-orange w-1/2 rounded-md md:text-2xl text-xl mt-12 hover:opacity-75  duration-300 font-aileron font-semibold"
                   >
                     Close
                   </button>
-                </div>
               </div>
             ) : (
               <motion.div
@@ -295,25 +208,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="pb-4 md:text-5xl text-3xl ">
-                  <span className="underline underline-offset-8 decoration-sky-blue">
-                    My name
-                  </span>{' '}
-                  is{' '}
-                  <span
-                    className={`${
-                      isDark ? 'text-dark-accent' : 'text-bright-orange'
-                    }`}
-                  >
-                    Sergej Japundža
-                  </span>
-                </p>
-                <p className="text-xl sm:text-2xl py-2">
-                  I'm a passionate self-taught MERN stack developer hailing from
-                  Sremska Mitrovica, Serbia. At the age of 23, I have already
-                  embarked on an exciting journey in the world of web
-                  development.
-                </p>
+                <Para option={true} isMobile={true}/>
                 <div className="flex text-xl md:text-2xl mt-4">
                   <button
                     className="text-accent-blue flex justify-center items-center hover:text-bright-orange group"
