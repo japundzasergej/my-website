@@ -31,14 +31,14 @@ const Project = ({ title }: ProjectType) => {
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="widescreen:text-5xl md:text-6xl text-3xl font-playfair mt-20">
+        <p className="widescreen:text-4xl lg:text-2xl md:text-6xl text-3xl font-playfair mt-20">
           {title}
         </p>
-        <p className="mt-7 lg:text-2xl md:text-4xl text-base">
+        <p className="mt-7 lg:text-xl md:text-4xl text-base">
           Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
           porttitor accumsan tincidunt.
         </p>
-        <div className="flex justify-center mt-10 font-playfair font-light lg:text-3xl md:text-4xl text-xl pb-14">
+        <div className="flex justify-center mt-10 font-playfair font-light widescreen:text-xl lg:text-lg md:text-4xl text-xl pb-14">
           <a
             href="#"
             className="bg-navy-blue p-2 w-1/2 rounded-tl-md rounded-bl-md text-metallic hover:scale-95 duration-200"
