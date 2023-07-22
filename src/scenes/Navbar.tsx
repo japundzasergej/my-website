@@ -16,7 +16,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import { useAppDispatch, useAppSelector } from '../hooks/useTypedHooks';
-import { setIsMenuOpen, setIsDark } from '../features/portfolioSlice';
+import { setIsMenuOpen, setIsDark } from '../app/features/portfolioSlice';
 import useMediaQuery from '../hooks/useMediaQuery';
 
 type Links = { id: number; link: string };
@@ -79,7 +79,7 @@ const Navbar = () => {
                 : `${isDesktop ? lightLogo : mLightLogo}`
             }
             alt="logo"
-            className='newScreen:scale-100 scale-50'
+            className="newScreen:scale-100 scale-50"
           />
         </div>
         {isDesktop ? (
@@ -119,7 +119,7 @@ const Navbar = () => {
               className="flex items-center justify-center cursor-pointer mx-auto"
               whileTap={{
                 rotate: 360,
-                scale: 0.6
+                scale: 0.6,
               }}
               transition={{ duration: 0.12 }}
             >

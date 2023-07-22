@@ -1,6 +1,6 @@
 import useMediaQuery from '../hooks/useMediaQuery';
 import { useAppSelector, useAppDispatch } from '../hooks/useTypedHooks';
-import { setIsModal, setIsMobileModal } from '../features/portfolioSlice';
+import { setIsModal, setIsMobileModal } from '../app/features/portfolioSlice';
 import { motion } from 'framer-motion';
 
 import { GoChevronRight } from 'react-icons/go';
@@ -21,7 +21,9 @@ const About = () => {
       id="about"
       className={`${
         isDark ? 'bg-dark-about' : 'bg-about'
-      } bg-no-repeat bg-cover flex items-center justify-center ${isDesktop ? 'py-64' : 'py-48'}`}
+      } bg-no-repeat bg-cover flex items-center justify-center ${
+        isDesktop ? 'py-64' : 'py-48'
+      }`}
     >
       <article className="flex flex-col justify-center items-center w-full h-full">
         {isMobileModal ? (
@@ -61,7 +63,7 @@ const About = () => {
               {isModal ? (
                 <div className="flex flex-col ">
                   <div className="bigscreen:text-base lg:text-sm text-xs font-playfair font-bold widescreen:p-10 p-4">
-                    <Para option={false} isMobile={false}/>
+                    <Para option={false} isMobile={false} />
                     <button
                       onClick={() => dispatch(setIsModal())}
                       className="p-2 bg-bright-orange w-1/2 rounded-md text-lg mt-4 hover:opacity-75  duration-300 font-aileron font-semibold"
@@ -188,13 +190,13 @@ const About = () => {
           <article className="w-screen flex justify-center items-center mt-10 ">
             {isMobileModal ? (
               <div className="bg-metallic w-5/6 flex flex-col justify-center text-center items-center rounded-md shadow-md font-semibold text-navy-blue font-playfair h-[800px] text-sm sm:text-base md:text-xl p-10">
-                  <Para option={false} isMobile={false}/>
-                  <button
-                    onClick={() => dispatch(setIsMobileModal())}
-                    className="p-2 bg-bright-orange w-1/2 rounded-md md:text-2xl text-xl mt-12 hover:opacity-75  duration-300 font-aileron font-semibold"
-                  >
-                    Close
-                  </button>
+                <Para option={false} isMobile={false} />
+                <button
+                  onClick={() => dispatch(setIsMobileModal())}
+                  className="p-2 bg-bright-orange w-1/2 rounded-md md:text-2xl text-xl mt-12 hover:opacity-75  duration-300 font-aileron font-semibold"
+                >
+                  Close
+                </button>
               </div>
             ) : (
               <motion.div
@@ -208,7 +210,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <Para option={true} isMobile={true}/>
+                <Para option={true} isMobile={true} />
                 <div className="flex text-xl md:text-2xl mt-4">
                   <button
                     className="text-accent-blue flex justify-center items-center hover:text-bright-orange group"
