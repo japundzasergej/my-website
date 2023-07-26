@@ -21,21 +21,24 @@ const projectVariant = {
 type ProjectType = { title: string };
 
 const Project = ({ title }: ProjectType) => {
+  const isDark = useAppSelector((state) => state.portfolio.isDark);
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center lg:p-16 text-navy-blue lg:text-lg text-xs`;
+    bg-grey z-30 flex flex-col justify-center items-center text-center lg:p-16 ${
+      isDark ? 'text-metallic' : 'text-navy-blue'
+    } lg:text-lg text-xs`;
   const projectTitle = title.split(' ').join('-').toLowerCase();
 
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="widescreen:text-5xl text-2xl font-playfair mt-20">
+        <p className="widescreen:text-4xl lg:text-2xl md:text-6xl text-3xl font-playfair mt-20">
           {title}
         </p>
-        <p className="mt-7 widescreen:text-2xl text-xl">
+        <p className="mt-7 lg:text-xl md:text-4xl text-base">
           Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
           porttitor accumsan tincidunt.
         </p>
-        <div className="flex justify-center mt-10 font-playfair font-light text-xl pb-14">
+        <div className="flex justify-center mt-10 font-playfair font-light widescreen:text-xl lg:text-lg md:text-4xl text-xl pb-14">
           <a
             href="#"
             className="bg-navy-blue p-2 w-1/2 rounded-tl-md rounded-bl-md text-metallic hover:scale-95 duration-200"

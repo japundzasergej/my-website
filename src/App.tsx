@@ -1,7 +1,7 @@
 import Navbar from './scenes/Navbar';
 import { useEffect } from 'react';
 import { useAppDispatch } from './hooks/useTypedHooks';
-import { setIsTopOfPage, setSelectedPage } from './features/portfolioSlice';
+import { setIsTopOfPage, setSelectedPage } from './app/features/portfolioSlice';
 import Landing from './scenes/Landing';
 import SelectedPages from './components/SelectedPages';
 import About from './scenes/About';

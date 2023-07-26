@@ -32,8 +32,7 @@ const Experience = () => {
     { id: 9, src: 'nodejs', style: 'shadow-green-600' },
     { id: 10, src: 'mongodb', style: 'shadow-green-300' },
     { id: 11, src: 'express', style: 'shadow-yellow-accent' },
-    { id: 12, src: 'chatgpt', style: 'shadow-green-300' },
-    { id: 13, src: 'github', style: 'shadow-blue-accent' },
+    { id: 12, src: 'github', style: 'shadow-blue-accent' },
   ];
 
   const isDesktop = useMediaQuery('(min-width: 1040px)');
@@ -67,7 +66,7 @@ const Experience = () => {
             } mx-auto mb-20`}
           />
         </motion.div>
-        <div className="lg:p-16 md:p-20 p-14 z-30 bg-metallic widescreen:w-4/6 w-5/6 rounded-lg font-aileron font-bold text-navy-blue flex justify-center items-center">
+        <div className="lg:p-18 md:p-20 p-14 z-30 bg-metallic widescreen:w-8/12 w-5/6 rounded-lg font-aileron font-bold text-navy-blue flex justify-center items-center">
           <motion.div
             className="grid newScreen:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-y-10 lg:gap-x-24 md:gap-x-36 gap-x-20 items-center"
             variants={container}
