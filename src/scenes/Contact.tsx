@@ -24,7 +24,6 @@ const Contact = () => {
 
   const isDark = useAppSelector((state) => state.portfolio.isDark);
   const isLarge = useMediaQuery('(min-width: 1040px)');
-  const isMedium = useMediaQuery('(min-width: 768px)');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     const isValid = await trigger();
