@@ -43,7 +43,7 @@ const Landing = () => {
         />
       )}
       <motion.div
-        className="z-30 mt-40 ml-4 widescreen:mt-32 widescreen:ml-12 text-metallic"
+        className="z-30 mt-40 ml-4 lg:ml-8 widescreen:mt-32 widescreen:ml-10 text-metallic"
         variants={{
           hidden: { opacity: 0, x: -50 },
           show: { opacity: 1, x: 0 },
@@ -53,7 +53,7 @@ const Landing = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <p className="widescreen:text-6xl midscreen:text-5xl lg:text-4xl md:text-6xl sm:text-5xl text-4xl text-center lg:text-start font-semibold max-widescreen:xl">
+        <p className="widescreen:text-6xl lg:text-5xl md:text-6xl sm:text-5xl text-4xl text-center lg:text-start font-semibold max-widescreen:xl">
           Hi, my name is{' '}
           <span className={`${isDark ? 'text-dark-accent' : 'text-navy-blue'}`}>
             Sergej

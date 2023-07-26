@@ -73,7 +73,7 @@ const Contact = () => {
         <div
           className={`flex ${
             isLarge ? '' : 'flex-col'
-          } justify-between items-center bigscreen:gap-x-[25px] widescreen:gap-x-[50px] `}
+          } justify-between items-center widescreen:gap-x-20 midscreen:gap-x-12 gap-x-14 `}
         >
           <motion.div
             initial="hidden"
@@ -85,7 +85,7 @@ const Contact = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="widescreen:text-5xl text-4xl text-center lg:text-start font-semibold text-metallic bigscreen:min-w-[900px] widescreen:min-w-[600px] newScreen:min-w-[375px]">
+            <p className="bigscreen:text-5xl midscreen:text-3xl lg:text-2xl md:text-4xl sm:text-3xl text-xl text-center lg:text-start font-semibold text-metallic whitespace-nowrap">
               Looking{' '}
               <span
                 className={`${isDark ? 'text-dark-accent' : 'text-navy-blue'}`}
@@ -121,7 +121,7 @@ const Contact = () => {
               <div className="text-navy-blue font-playfair font-semibold newScreen:text-xl text-3xl focus:outline-none">
                 <input
                   type="text"
-                  className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
+                  className="md:w-[700px] widescreen:w-[600px] newScreen:w-[450px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
                   placeholder="Enter your name..."
                   {...register('name', {
                     required: true,
@@ -146,7 +146,7 @@ const Contact = () => {
                 )}
                 <input
                   type="email"
-                  className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm  mt-10 placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
+                  className="md:w-[700px] widescreen:w-[600px] newScreen:w-[450px] w-[400px] newScreen:h-[44px] md:h-[100px] p-2 bg-light-beige rounded-sm  mt-10 placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
                   placeholder="Enter your email..."
                   {...register('email', {
                     required: true,
@@ -166,7 +166,7 @@ const Contact = () => {
                 )}
                 <input
                   type="text"
-                  className="md:w-[700px] newScreen:w-[600px] w-[400px] newScreen:h-[44px] md:h-[100px] my-10 p-2 bg-light-beige rounded-sm placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
+                  className="md:w-[700px] widescreen:w-[600px] newScreen:w-[450px] w-[400px] newScreen:h-[44px] md:h-[100px] my-10 p-2 bg-light-beige rounded-sm placeholder:text-navy-blue newScreen:placeholder:text-xl md:placeholder:text-3xl placeholder:text-xl"
                   placeholder="Enter your company name... (optional)"
                   {...register('company', {
                     required: false,
@@ -188,9 +188,7 @@ const Contact = () => {
                   </div>
                 )}
                 <textarea
-                  rows={5}
-                  cols={isMedium ? 35 : 22}
-                  className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-3xl font-playfair font-semibold focus:outline-none md:placeholder:text-3xl newScreen:placeholder:text-2xl placeholder:text-xl"
+                  className="resize-none bg-light-beige rounded-sm text-navy-blue placeholder:text-navy-blue p-4 text-3xl font-playfair font-semibold focus:outline-none md:placeholder:text-3xl newScreen:placeholder:text-2xl placeholder:text-xl widescreen:w-[600px] md:w-[700px] newScreen:w-[450px] lg:h-[180px] md:h-[240px] w-[400px] h-[160px]"
                   placeholder="Your message here..."
                   {...register('message', {
                     required: true,

@@ -22,7 +22,7 @@ export default {
       },
       screens: {
         widescreen: '1340px',
-        midscreen: '1200px',
+        midscreen: '1210px',
         bigscreen: '1600px',
         newScreen: '1024px'
       },
