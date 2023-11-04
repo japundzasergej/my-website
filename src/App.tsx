@@ -1,16 +1,16 @@
-import Navbar from './scenes/Navbar';
+import Navbar from './pages/Navbar';
 import { useEffect } from 'react';
 import { useAppDispatch } from './hooks/useTypedHooks';
-import { setIsTopOfPage, setSelectedPage } from './app/features/portfolioSlice';
-import Landing from './scenes/Landing';
+import { setIsTopOfPage, setSelectedPage } from './features/portfolioSlice';
+import Landing from './pages/Landing';
 import SelectedPages from './components/SelectedPages';
-import About from './scenes/About';
+import About from './pages/About';
 import useMediaQuery from './hooks/useMediaQuery';
 import Line from './components/Line';
-import Portfolio from './scenes/Portfolio';
-import Experience from './scenes/Experience';
-import Contact from './scenes/Contact';
-import Footer from './scenes/Footer';
+import Portfolio from './pages/Portfolio';
+import Experience from './pages/Experience';
+import Contact from './pages/Contact';
+import Footer from './pages/Footer';
 
 const App = () => {
   const dispatch = useAppDispatch();

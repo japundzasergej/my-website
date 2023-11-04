@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { useAppDispatch, useAppSelector } from '../hooks/useTypedHooks';
-import { setSelectedPage } from '../app/features/portfolioSlice';
+import { setSelectedPage } from '../features/portfolioSlice';
 
 import { GoChevronRight } from 'react-icons/go';
 import useMediaQuery from '../hooks/useMediaQuery';

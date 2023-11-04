@@ -16,7 +16,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import { useAppDispatch, useAppSelector } from '../hooks/useTypedHooks';
-import { setIsMenuOpen, setIsDark } from '../app/features/portfolioSlice';
+import { setIsMenuOpen, setIsDark } from '../features/portfolioSlice';
 import useMediaQuery from '../hooks/useMediaQuery';
 
 type Links = { id: number; link: string };

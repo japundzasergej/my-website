@@ -30,7 +30,9 @@ const Para = ({ option, isMobile }: Option) => {
           </p>
           <p
             className={`${
-              isMobile ? 'text-xl sm:text-2xl md:py-12 py-6' : 'p-10 lg:text-2xl text-lg'
+              isMobile
+                ? 'text-xl sm:text-2xl md:py-12 py-6'
+                : 'p-10 lg:text-2xl text-lg'
             }`}
           >
             I'm a passionate self-taught MERN stack developer hailing from
@@ -48,12 +50,11 @@ const Para = ({ option, isMobile }: Option) => {
             web applications.
           </p>
           <p className="py-4">
-            When it comes to front-end development, I rely on TypeScript and
-            React as my go-to tools. The combination of these technologies
-            empowers me to create dynamic and interactive user interfaces with
-            ease. To boost my development workflow, I leverage Vite.js as my
+            When it comes to front-end development, I rely on React as my go-to
+            tool. To boost my development workflow, I leverage Vite.js as my
             build tool, allowing me to deliver performant applications quickly
-            and efficiently.
+            and efficiently. The combination of these technologies empowers me
+            to create dynamic and interactive user interfaces with ease.
           </p>
           <p className="mb-2">
             Furthermore, I have a deep understanding of the importance of

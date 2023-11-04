@@ -1,6 +1,6 @@
 import useMediaQuery from '../hooks/useMediaQuery';
 import { useAppSelector, useAppDispatch } from '../hooks/useTypedHooks';
-import { setIsModal, setIsMobileModal } from '../app/features/portfolioSlice';
+import { setIsModal, setIsMobileModal } from '../features/portfolioSlice';
 import { motion } from 'framer-motion';
 
 import { GoChevronRight } from 'react-icons/go';
@@ -26,9 +26,7 @@ const About = () => {
       }`}
     >
       <article className="flex flex-col justify-center items-center w-full h-full">
-        {isMobileModal ? (
-          <></>
-        ) : (
+        {isMobileModal && (
           <motion.div
             className={`text-6xl font-aileron font-semibold ${
               isDark ? 'text-metallic' : 'text-white'
