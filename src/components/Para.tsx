@@ -36,14 +36,14 @@ const Para = ({ option, isMobile }: Option) => {
             }`}
           >
             I'm a passionate self-taught MERN stack developer hailing from
-            Sremska Mitrovica, Serbia. At the age of 22, I have already embarked
+            Sremska Mitrovica, Serbia. At the age of 23, I have already embarked
             on an exciting journey in the world of web development.
           </p>
         </>
       ) : (
         <>
           <p>
-            Over the course of three months, I dedicated myself to honing my
+            Over the course of four months, I dedicated myself to honing my
             skills and mastering the MERN (MongoDB, Express, React, Node.js)
             stack. Through countless hours of self-study and hands-on projects,
             I have developed a strong foundation in building robust and scalable

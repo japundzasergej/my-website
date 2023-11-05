@@ -1,4 +1,4 @@
-import Navbar from './pages/Navbar';
+import Navbar from './features/navbar/Navbar';
 import { useEffect } from 'react';
 import { useAppDispatch } from './hooks/useTypedHooks';
 import { setIsTopOfPage, setSelectedPage } from './features/portfolioSlice';
@@ -8,7 +8,7 @@ import About from './pages/About';
 import useMediaQuery from './hooks/useMediaQuery';
 import Line from './components/Line';
 import Portfolio from './pages/Portfolio';
-import Experience from './pages/Experience';
+import Experience from './features/experience/Experience';
 import Contact from './pages/Contact';
 import Footer from './pages/Footer';
 

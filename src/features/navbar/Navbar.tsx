@@ -1,42 +1,31 @@
-import Link from '../components/Link';
+import { useAppDispatch, useAppSelector } from '../../hooks/useTypedHooks';
+import { setIsMenuOpen, setIsDark } from '../portfolioSlice';
+import useMediaQuery from '../../hooks/useMediaQuery';
+import Link from '../../components/Link';
 
-import lightLogo from '../assets/light.ico';
-import darkLogo from '../assets/dark.ico';
-import mLightLogo from '../assets/m-light.png';
-import mDarkLogo from '../assets/m-dark.png';
+import lightLogo from '../../assets/light.ico';
+import darkLogo from '../../assets/dark.ico';
+import mLightLogo from '../../assets/m-light.png';
+import mDarkLogo from '../../assets/m-dark.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import nightMode from '../assets/night-mode.png';
-import lNightMode from '../assets/l-night-mode.png';
-import mNightMode from '../assets/m-night-mode.png';
-import mLightMode from '../assets/m-l-night-mode.png';
+import nightMode from '../../assets/night-mode.png';
+import lNightMode from '../../assets/l-night-mode.png';
+import mNightMode from '../../assets/m-night-mode.png';
+import mLightMode from '../../assets/m-l-night-mode.png';
 
 import { motion } from 'framer-motion';
 
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
 
-import { useAppDispatch, useAppSelector } from '../hooks/useTypedHooks';
-import { setIsMenuOpen, setIsDark } from '../features/portfolioSlice';
-import useMediaQuery from '../hooks/useMediaQuery';
-
-type Links = { id: number; link: string };
-type Links2 = { id: number; link: string; title: string };
-
 const Navbar = () => {
-  const links: Links[] = [
-    { id: 1, link: 'home' },
-    { id: 2, link: 'about' },
-    { id: 3, link: 'portfolio' },
-    { id: 4, link: 'experience' },
-    { id: 5, link: 'contact' },
-  ];
-  const links2: Links2[] = [
-    { id: 1, link: 'm-home', title: 'home' },
-    { id: 2, link: 'm-about', title: 'about' },
-    { id: 3, link: 'm-portfolio', title: 'portfolio' },
-    { id: 4, link: 'm-experience', title: 'experience' },
-    { id: 5, link: 'm-contact', title: 'contact' },
-  ];
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const { isMenuOpen, isDark, isTopOfPage } = useAppSelector(
+    (state) => state.portfolio
+  );
+  const links = useAppSelector((state) => state.nav);
+  const mobileLinks = useAppSelector((state) => state.mobileNav);
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -55,12 +44,30 @@ const Navbar = () => {
     },
   };
 
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
-  const dispatch = useAppDispatch();
+  
+  const renderedLinks = links.map(({ id, link }) => (
+    <div
+      key={id}
+      className="text-metallic font-semibold border-r-2 px-4 border-sky-blue  widescreen:text-xl text-md"
+    >
+      <Link page={link}></Link>
+    </div>
+  ));
 
-  const { isMenuOpen, isDark, isTopOfPage } = useAppSelector(
-    (state) => state.portfolio
-  );
+  const renderedMobileLinks = mobileLinks.map(({ id, link, title }) => (
+    <motion.div
+      key={id}
+      className={`text-center relative md:text-7xl sm:text-6xl text-4xl text-black py-5 font-bold ${link} before:absolute md:before:-left-28 before:-left-20 before:top-10 py-8 text-metallic border-b-2 flex justify-center border-sky-blue font-noto cursor-pointer`}
+      variants={item}
+      whileHover={{ scale: 1.1 }}
+    >
+      <AnchorLink href={`#${title}`} onClick={() => dispatch(setIsMenuOpen())}>
+        {title.toUpperCase()}
+      </AnchorLink>
+    </motion.div>
+  ));
+
+  const dispatch = useAppDispatch();
 
   return (
     <nav
@@ -74,9 +81,9 @@ const Navbar = () => {
         <div className=" flex justify-center items-center mx-auto">
           <img
             src={
-              isDark
-                ? `${isDesktop ? darkLogo : mDarkLogo}`
-                : `${isDesktop ? lightLogo : mLightLogo}`
+              isDesktop
+                ? `${isDark ? darkLogo : lightLogo}`
+                : `${isDark ? mDarkLogo : mLightLogo}`
             }
             alt="logo"
             className="newScreen:scale-100 scale-50"
@@ -84,14 +91,7 @@ const Navbar = () => {
         </div>
         {isDesktop ? (
           <div className="flex widescreen:gap-12 gap-8 md:mx-auto py-6 lg:text-lg text-sm font-noto">
-            {links.map(({ id, link }) => (
-              <div
-                key={id}
-                className="text-metallic font-semibold border-r-2 px-4 border-sky-blue  widescreen:text-xl text-md"
-              >
-                <Link page={link}></Link>
-              </div>
-            ))}
+            {renderedLinks}
             <div className="ml-5 group">
               <button
                 className={`${
@@ -157,21 +157,7 @@ const Navbar = () => {
               animate="show"
               className="z-40"
             >
-              {links2.map(({ id, link, title }) => (
-                <motion.div
-                  key={id}
-                  className={`text-center relative md:text-7xl sm:text-6xl text-4xl text-black py-5 font-bold ${link} before:absolute md:before:-left-28 before:-left-20 before:top-10 py-8 text-metallic border-b-2 flex justify-center border-sky-blue font-noto cursor-pointer`}
-                  variants={item}
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <AnchorLink
-                    href={`#${title}`}
-                    onClick={() => dispatch(setIsMenuOpen())}
-                  >
-                    {title.toUpperCase()}
-                  </AnchorLink>
-                </motion.div>
-              ))}
+              {renderedMobileLinks}
             </motion.div>
             <div className="bg-abstract absolute h-full w-full bg-cover z-0 "></div>
           </motion.div>
