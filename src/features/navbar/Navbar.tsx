@@ -24,7 +24,6 @@ const Navbar = () => {
     (state) => state.portfolio
   );
   const links = useAppSelector((state) => state.nav);
-  const mobileLinks = useAppSelector((state) => state.mobileNav);
 
   const container = {
     hidden: { opacity: 0 },
@@ -54,15 +53,15 @@ const Navbar = () => {
     </div>
   ));
 
-  const renderedMobileLinks = mobileLinks.map(({ id, link, title }) => (
+  const renderedMobileLinks = links.map(({ id, link }) => (
     <motion.div
       key={id}
-      className={`text-center relative md:text-7xl sm:text-6xl text-4xl text-black py-5 font-bold ${link} before:absolute md:before:-left-28 before:-left-20 before:top-10 py-8 text-metallic border-b-2 flex justify-center border-sky-blue font-noto cursor-pointer`}
+      className={`text-center relative md:text-7xl sm:text-6xl text-4xl text-black py-5 font-bold m-${link} before:absolute md:before:-left-28 before:-left-20 before:top-10 py-8 text-metallic border-b-2 flex justify-center border-sky-blue font-noto cursor-pointer`}
       variants={item}
       whileHover={{ scale: 1.1 }}
     >
-      <AnchorLink href={`#${title}`} onClick={() => dispatch(setIsMenuOpen())}>
-        {title.toUpperCase()}
+      <AnchorLink href={`#${link}`} onClick={() => dispatch(setIsMenuOpen())}>
+        {link.toUpperCase()}
       </AnchorLink>
     </motion.div>
   ));
